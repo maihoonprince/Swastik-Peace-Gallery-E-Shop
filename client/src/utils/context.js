@@ -1,9 +1,23 @@
-import {createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const Context = createContext();
 
-const AppContext = ({children}) => {
-    return <Context.Provider>{children}</Context.Provider>;
+const AppContext = ({ children }) => {
+  const [categoeies, setCategories] = useState();
+  const [peoducts, setProducts] = useState();
+
+  return (
+    <Context.Provider
+      value={{
+        categoeies,
+        setCategories,
+        peoducts,
+        setProducts,
+      }}
+    >
+      {children}
+    </Context.Provider>
+  );
 };
 
 export default AppContext;

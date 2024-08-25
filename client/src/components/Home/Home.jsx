@@ -10,7 +10,7 @@ import { Context } from "../../utils/context";
 
 
 const Home = () => {
-    const { categoeies, setCategories, products, setProducts } = useContext(Context);
+    const { categories, setCategories, products, setProducts } = useContext(Context);
 
     useEffect(() => {
         getProducts();
@@ -36,7 +36,7 @@ const Home = () => {
             <Banner />
             <div className="main-content">
                 <div className="layout">
-                    <Category categories={categoeies} />
+                    <Category categories={categories} />
                     <Products products={products} headingText="Popular Products" />
                 </div>
             </div>

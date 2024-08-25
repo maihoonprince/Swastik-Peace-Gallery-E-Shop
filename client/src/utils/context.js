@@ -3,15 +3,15 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 
 const AppContext = ({ children }) => {
-  const [categoeies, setCategories] = useState();
-  const [peoducts, setProducts] = useState();
+  const [categories, setCategories] = useState();
+  const [products, setProducts] = useState();
 
   return (
     <Context.Provider
       value={{
-        categoeies,
+        categories,
         setCategories,
-        peoducts,
+        products,
         setProducts,
       }}
     >

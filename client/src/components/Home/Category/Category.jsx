@@ -1,26 +1,28 @@
 import "./Category.scss";
-import cat1 from "../../../assets/category/cat-1.jpg"
 
-const Category = () => {
-    return <div className="shop-by-category">
-        <div className="categories">
-            <div className="category">
-                <img src={cat1} alt="" />
-            </div>
+const Category = ({ categories }) => {
+    // Check if categories or categories.data is undefined or null
+    if (!categories || !categories.data) {
+        return <div>No categories available</div>;
+    }
 
-            <div className="category">
-                <img src={cat1} alt="" />
-            </div>
-
-            <div className="category">
-                <img src={cat1} alt="" />
-            </div>
-
-            <div className="category">
-                <img src={cat1} alt="" />
+    return (
+        <div className="shop-by-category">
+            <div className="categories">
+                {categories.data.map((item) => (
+                    <div key={item.id} className="category">
+                        <img
+                            src={
+                                process.env.REACT_APP_DEV_URL +
+                                item.attributes?.img?.data?.attributes?.url || "default-image.jpg"
+                            }
+                            alt={item.attributes?.name || "Category Image"}
+                        />
+                    </div>
+                ))}
             </div>
         </div>
-    </div>;
+    );
 };
 
 export default Category;

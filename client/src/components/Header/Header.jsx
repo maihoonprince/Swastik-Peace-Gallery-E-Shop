@@ -2,8 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { TbSearch } from "react-icons/tb";
-import { CgShoppingCart } from "react-icons/cg";
-import { AiOutlineHeart } from "react-icons/ai";
+// import { CgShoppingCart } from "react-icons/cg";
+// import { AiOutlineHeart } from "react-icons/ai";
 
 import Search from "./Search/Search";
 import Cart from "../Cart/Cart";
@@ -37,8 +37,8 @@ const Header = () => {
                 <div className="header-content">
                     <ul className="left">
                         <li onClick={() => navigate("/")} >Home</li>
-                        <li>About</li>
-                        <li>Categories</li>
+                        <li onClick={() => navigate("/about")} >About</li>
+                        {/* <li>Categories</li> */}
                     </ul>
                     <div
                         className="center"
@@ -49,19 +49,19 @@ const Header = () => {
                     <div className="right">
                         <TbSearch onClick={() => setShowSearch(true)} />
 
-                        <AiOutlineHeart />
+                        {/* <AiOutlineHeart />
 
                         <span className="cart-icon"
                             onClick={() => setShowCart(true)}
                         >
                             <CgShoppingCart />
                             <span>5</span>
-                        </span>
+                        </span> */}
                     </div>
                 </div>
             </header>
 
-            {showCart && <Cart setShowCart={setShowCart} />}
+            {/* {showCart && <Cart setShowCart={setShowCart} />} */}
             {showSearch && <Search setShowSearch={setShowSearch} />}
         </>
     );

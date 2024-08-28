@@ -1,5 +1,6 @@
 import "./Banner.scss";
 import BannerImg from "../../../assets/banner-img.png";
+import jwelImg from "../../../assets/2.png";
 
 
 const Banner = () => {

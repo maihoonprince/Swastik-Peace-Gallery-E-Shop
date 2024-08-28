@@ -60,21 +60,21 @@
                     font-size: 24px;
                 }
             }
-            .cart-icon{
-                position: relative;
-                span{
-                    min-width: 20px;
-                    text-align: center;
-                    background-color: #8e2de2;
-                    padding: 2.5px;
-                    position: absolute;
-                    top: -5px;
-                    right: -12px;
-                    font-size: 12px;
-                    line-height: 1;
-                    border-radius: 10px;
-                }
-            }
+            // .cart-icon{
+            //     position: relative;
+            //     span{
+            //         min-width: 20px;
+            //         text-align: center;
+            //         background-color: #8e2de2;
+            //         padding: 2.5px;
+            //         position: absolute;
+            //         top: -5px;
+            //         right: -12px;
+            //         font-size: 12px;
+            //         line-height: 1;
+            //         border-radius: 10px;
+            //     }
+            // }
         }
     }
     &.sticky-header{

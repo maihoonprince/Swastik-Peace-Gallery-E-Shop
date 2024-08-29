@@ -1,4 +1,5 @@
-import { useEffect, useContext, useState } from "react";
+import React from "react";
+import { useEffect, useContext } from "react";
 
 import "./Home.scss";
 
@@ -15,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         getProducts();
         getCategories();
-    }, []);
+    }, [getProducts, getCategories]);
 
     const getProducts = () => {
         fetchDataFromApi("/api/products?populate=*").then((res) => {

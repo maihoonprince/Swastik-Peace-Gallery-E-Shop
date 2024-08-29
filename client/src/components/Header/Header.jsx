@@ -1,20 +1,13 @@
-import { useState, useEffect, useContext } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { TbSearch } from "react-icons/tb";
-// import { CgShoppingCart } from "react-icons/cg";
-// import { AiOutlineHeart } from "react-icons/ai";
-
 import Search from "./Search/Search";
-import Cart from "../Cart/Cart";
-import { Context } from "../../utils/context";
-
 import "./Header.scss";
 
 const Header = () => {
 
     const [scrolled, setScrolled] = useState(false);
-    const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const navigate = useNavigate();
 
@@ -38,7 +31,6 @@ const Header = () => {
                     <ul className="left">
                         <li onClick={() => navigate("/")} >Home</li>
                         <li onClick={() => navigate("/about")} >About</li>
-                        {/* <li>Categories</li> */}
                     </ul>
                     <div
                         className="center"
@@ -48,20 +40,10 @@ const Header = () => {
                     </div>
                     <div className="right">
                         <TbSearch onClick={() => setShowSearch(true)} />
-
-                        {/* <AiOutlineHeart />
-
-                        <span className="cart-icon"
-                            onClick={() => setShowCart(true)}
-                        >
-                            <CgShoppingCart />
-                            <span>5</span>
-                        </span> */}
                     </div>
                 </div>
             </header>
 
-            {/* {showCart && <Cart setShowCart={setShowCart} />} */}
             {showSearch && <Search setShowSearch={setShowSearch} />}
         </>
     );

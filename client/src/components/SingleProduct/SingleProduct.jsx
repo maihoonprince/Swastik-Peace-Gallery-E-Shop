@@ -1,8 +1,8 @@
+import React from "react";
 import "./SingleProduct.scss";
 import RelatedProducts from "./RelatedProducts/RelatedProducts";
 
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaCartPlus, } from "react-icons/fa";
-import prod from "../../assets/products/earbuds-prod-1.webp";
 
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
@@ -18,14 +18,14 @@ const SingleProduct = () => {
             <div className="layout">
                 <div className="single-product-page">
                     <div className="left">
-                    <img
-    src={
-        product.img.data[0].attributes.url.startsWith('http') 
-            ? product.img.data[0].attributes.url 
-            : process.env.REACT_APP_DEV_URL + product.img.data[0].attributes.url
-    }
-    alt="Product Image"
-/>
+                        <img
+                            src={
+                                product.img.data[0].attributes.url.startsWith('http')
+                                    ? product.img.data[0].attributes.url
+                                    : process.env.REACT_APP_DEV_URL + product.img.data[0].attributes.url
+                            }
+                            alt={product.title}
+                        />
 
                     </div>
                     <div className="right">

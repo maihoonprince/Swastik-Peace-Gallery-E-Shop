@@ -63,7 +63,8 @@ const Footer = () => {
                     <div className="text">
                         Swastik Store 2024 CREATED BY PRINCE.
                     </div>
-                    <img src={Payment} />
+                    <img src={Payment} alt="payment" />
+                    
                 </div>
             </div>
         </div>

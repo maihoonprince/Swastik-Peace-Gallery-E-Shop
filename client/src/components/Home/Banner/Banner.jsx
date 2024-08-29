@@ -1,8 +1,12 @@
+import React from "react";
 import "./Banner.scss";
 import BannerImg from "../../../assets/banner-img.png";
+<<<<<<< HEAD
 import jwelImg from "../../../assets/2.png";
 import model from "../../../assets/model.png";
 
+=======
+>>>>>>> 790aec1751be35a90f383d8f29e52b4835f1dd61
 
 const Banner = () => {
     return (

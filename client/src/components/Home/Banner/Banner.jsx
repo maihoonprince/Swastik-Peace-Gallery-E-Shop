@@ -1,6 +1,7 @@
 import "./Banner.scss";
 import BannerImg from "../../../assets/banner-img.png";
 import jwelImg from "../../../assets/2.png";
+import model from "../../../assets/model.png";
 
 
 const Banner = () => {
@@ -17,7 +18,7 @@ const Banner = () => {
                         <div className="banner-cta v2">Shop Now</div>
                     </div>
                 </div>
-                <img className="banner-img" src={BannerImg} alt="" />
+                <img className="banner-img" src={model} alt="" />
             </div>
         </div>
     );

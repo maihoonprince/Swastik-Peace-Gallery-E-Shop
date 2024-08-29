@@ -21,12 +21,14 @@ const Category = ({ categories }) => {
                         onClick={() => navigate(`/category/${item.id}`)}
                     >
                         <img
-                            src={
-                                process.env.REACT_APP_DEV_URL +
-                                item.attributes?.img?.data?.attributes?.url || "default-image.jpg"
-                            }
-                            alt={item.attributes?.name || "Category Image"}
-                        />
+    src={
+        (item.attributes?.img?.data?.attributes?.url 
+            ? item.attributes.img.data.attributes.url 
+            : "default-image.jpg")
+    }
+    alt={item.attributes?.name || "Category Image"}
+/>
+
                     </div>
                 ))}
             </div>

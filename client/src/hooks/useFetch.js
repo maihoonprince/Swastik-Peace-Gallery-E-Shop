@@ -4,14 +4,18 @@ import { fetchDataFromApi } from "../utils/api";
 const useFetch = (endpoint) => {
     const [data, setData] = useState();
 
+    const makeApiCall = async () => {
+        try {
+            const res = await fetchDataFromApi(endpoint);
+            setData(res);
+        } catch (error) {
+            console.error("Failed to fetch data:", error);
+        }
+    };
+
     useEffect(() => {
         makeApiCall();
-    }, [makeApiCall]);
-
-    const makeApiCall = async () => {
-        const res = await fetchDataFromApi(endpoint);
-        setData(res);
-    };
+    }, [endpoint]); // Depend on endpoint to refetch when it changes
 
     return { data };
 };
